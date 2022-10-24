@@ -1,0 +1,59 @@
+.Container {
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas:
+      "header header header"
+      "left main right"
+      "footer footer footer";
+  grid-gap: 5px;
+  height: 100vh;
+}
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  grid-area: header;
+  font-size: 30px;
+  color: white;
+  background-color: aquamarine;
+}
+
+.Left {
+  grid-area: left;
+  background-color: bisque;
+}
+
+.Right {
+  grid-area: right;
+  background-color: bisque;
+}
+
+.Main {
+  display: flex;
+  grid-area: main;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+}
+
+.Footer {
+  grid-area: footer;
+  background-color: aquamarine;
+}
+
+.Box {
+  width: 60px;
+  height: 60px;
+  background: brown;
+  transition: 0.5s;
+}
+
+.Box:hover {
+  width: 120px;
+  height: 120px;
+  background: green;
+
+}
